@@ -3,11 +3,13 @@ import java.util.*;
 
 public class CalculatorMain {
 	
-	private Scanner sc;
-	private Calculator calc[];
-	private int number_of_student;
 	
-	public void array_of_hight_obj() {
+	public  static Calculator calc[];
+	
+	public static void array_of_hight_obj() {
+		Scanner sc;
+		
+		int  number_of_student;
 		
 		sc=new Scanner(System.in);
 		System.out.println("pls enter number students");
@@ -20,23 +22,34 @@ public class CalculatorMain {
 			Calculator s=new Calculator();
 			System.out.println("Enter student hight id ");
 			s.sethight(sc.nextInt());
+			calc[x]=s;
 			
 			
 		}
 	}
 	
-	public void average()
+	public static void average()
 	
 	{
-		double total;
+		double total=0;
 		
 		for(int x=0;x<calc.length;x++)
 		{
-			
+			total= total+calc[x].gethight();
 			
 		}
 		
-		System.out.println("Employee id is "+emparr[x].getEmpid());
+		double average =total/calc.length;
+		
+		System.out.println("Avarge is " + average);
+	}
+	
+	
+	public static void main(String args[]) {
+		
+		array_of_hight_obj();
+		average();
+		
 	}
 	
 
