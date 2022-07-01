@@ -5,7 +5,7 @@ public class Department {
 	
 	private int deptcode;
 	private String deptname;
-	private List<Employee> emplist=null;
+	private List<Employee> emplist;
 	
 	public int getDeptcode() {
 		return deptcode;
