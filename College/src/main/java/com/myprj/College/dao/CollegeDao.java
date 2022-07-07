@@ -56,7 +56,7 @@ public class CollegeDao implements CollegeInter {
 	public List<College> getDetails() {
 		// TODO Auto-generated method stub
 		Session ses=fact.openSession();
-		Query query=ses.createQuery("from Student");
+		Query query=ses.createQuery("from College");
 		List<College> collegelist=query.list();
 		return collegelist;
 	}

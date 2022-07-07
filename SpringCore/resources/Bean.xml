@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+  
+	  <!-- Employee emobj=new Employee() -->
+	  <bean id="empobj" class="com.myprj.Jdbc.SpringCore.Employee">
+		  <property name="emcollegecode,collegename pid" value="1001"/>
+		  <property name="empname" value="Vansh"/>
+		  <property name="salary" value="24234"/>
+	  </bean>
+	  
+	  <bean id="employee2" class="com.myprj.Jdbc.SpringCore.Employee">
+		  <property name="empid" value="1002"/>
+		  <property name="empname" value="Joseph"/>
+		  <property name="salary" value="234324"/>
+	  </bean>
+	  
+	  <bean id="dept1" class="com.myprj.Jdbc.SpringCore.Department">
+		  <property name="dept_code" value="1"/>
+		  <property name="dept_name" value="HR"/>
+		  <property name="city" value="Mumbai"/>
+		  <property name="emp1" ref="employee2"/>
+	  </bean>
+	  
+	    <bean id="stuobj" class="com.myprj.Jdbc.SpringCore.Student">
+		  <property name="studentcode" value="34"/>
+		  <property name="studentname" value="HRon"/>
+		  <property name="score" value="24"/>
+	  </bean>
+	    <bean id="" class="com.myprj.Jdbc.SpringCore.College">
+		  <property name="collegecode" value="11"/>
+		  <property name="collegename" value="HRiin"/>
+		  <property name="emp1" ref="stuobj"/>
+	  </bean>
+  </beans>

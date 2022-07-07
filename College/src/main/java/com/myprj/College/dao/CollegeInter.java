@@ -10,9 +10,9 @@ import com.myprj.College.entity.Student;
 public interface CollegeInter {
 	
 		public void addDetails(College c);
-		public void removeDetails(int collegeid);
+		public void removeDetails(int id);
 		public List<College> getDetails();
-		public void updateDetails(int collegeid);	
+		public void updateDetails(int id);	
 		
 
 }

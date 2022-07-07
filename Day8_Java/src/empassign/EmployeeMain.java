@@ -10,7 +10,7 @@ public class EmployeeMain {
 		
 		for(int i=0;i<5;i++) {
 			
-			emp.add(null)
+			emp.add(null);
 			
 		}
 		
